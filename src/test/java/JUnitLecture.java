@@ -33,4 +33,19 @@ public class JUnitLecture {
         assertNotSame(sheep, dog);
         assertSame(sheep, clonedSheep);
     }
+
+    @Test
+    public void testIfAssertArrayEquals() {
+        char[] expected = {'J','u','n','i','t'};
+        char[] actual = "Junit".toCharArray();
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testIfGreaterOrLesserThanWorks() {
+        boolean learningTDD = true;
+        assertTrue(learningTDD);
+        assertTrue("5 is greater than 4", 5 > 4);
+        assertFalse("5 is not greater than 6", 5 > 6);
+    }
 }
