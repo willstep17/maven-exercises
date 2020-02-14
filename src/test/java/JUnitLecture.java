@@ -1,9 +1,13 @@
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class JUnitLecture {
-    public static void main(String[] args) {
+    private List<String> names;
 
+    public static void main(String[] args) {
     }
 
     @Test
@@ -47,5 +51,16 @@ public class JUnitLecture {
         assertTrue(learningTDD);
         assertTrue("5 is greater than 4", 5 > 4);
         assertFalse("5 is not greater than 6", 5 > 6);
+    }
+
+    @Before
+    public void setUp() {
+        this.names = new ArrayList<String>();
+        this.names.add("Daniel");
+    }
+
+    @Test
+    public void testIfNamesIsInitialized() {
+        assertNotNull(names);
     }
 }
