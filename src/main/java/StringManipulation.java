@@ -1,3 +1,5 @@
+
+
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Scanner;
@@ -7,10 +9,10 @@ public class StringManipulation {
         Scanner scanner = new Scanner(System.in);
         String userInput;
 
-        while(true) {
+        while (true) {
             System.out.print("Enter Something: ");
             userInput = scanner.nextLine();
-            if(StringUtils.isNumeric(userInput)) {
+            if (StringUtils.isNumeric(userInput)) {
                 System.out.println("\"" + userInput + "\"" + " is numeric");
             } else {
                 System.out.println("\"" + userInput + "\"" + " is not numeric");
@@ -24,5 +26,4 @@ public class StringManipulation {
         }
 
     }
-
 }
